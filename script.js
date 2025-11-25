@@ -3,6 +3,13 @@ const AddBook = document.getElementById("AddBook")
 const Favorites_Menu = document.getElementById("Favorites_Menu")
 const inputTittle = document.getElementById("inputTittle")
 const inputUrl = document.getElementById("inputUrl")
+const AddSection = document.getElementById("AddSection")
+const FavSection = document.getElementById("FavSection")
+const favoritesMenu = document.getElementById("favoritesMenu")
+const Homebtn = document.getElementById("Homebtn")
+const menu_btn = document.getElementById("menu-btn")
+const menu = document.getElementById("menu")
+const closeBtn = document.getElementById("closebtn")
 
 
 
@@ -90,4 +97,35 @@ Fav.remove();
   
     
 })
+let textChange = document.getElementById("textChange")
+let textChanger = document.getElementById("textChanger")
+let homeBg = document.getElementById("HomeBg")
+let FavBg = document.getElementById("FavBg")
+favoritesMenu.addEventListener("click" , () =>{
+  homeBg.style.backgroundColor = "#1d1d1d"
+  FavBg.style.backgroundColor = "gray"
+  AddSection.classList.add("hidden")
+  FavSection.classList.remove("hidden")
+  textChange.innerHTML = "/ Favorites";
+  textChanger.innerHTML = "/ Favorites";
+  menu.classList.add("hidden")
+})
 
+  Homebtn.addEventListener("click" , () =>{
+  homeBg.style.backgroundColor = "gray"
+  FavBg.style.backgroundColor = "#1d1d1d"
+  AddSection.classList.remove("hidden")
+  FavSection.classList.add("hidden")
+  textChange.innerHTML = "/ Home";
+  textChanger.innerHTML = "/ Home";
+  menu.classList.add("hidden")
+
+  })
+ 
+  menu_btn.addEventListener("click" , ()=>{
+    menu.classList.remove("hidden")
+  })
+
+  closeBtn.addEventListener("click" , () =>{
+    menu.classList.add("hidden")
+  })
