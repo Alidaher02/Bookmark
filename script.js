@@ -63,7 +63,7 @@ AddBook.addEventListener("click" , () =>{
                 <h2 class="font-semibold w-60 sm:w-[1000px] p-2 overflow-y-auto">${title}</h2>
                 <h3 class="text-blue-400 w-60 sm:w-[1000px] p-2 overflow-y-auto">${url}</h3>
               </div>
-            <button class="favbtn"><i id="heartbg" class="fas fa-heart mr-2 heartBg"></i></button>
+            <button class="favbtn"><i id="heartbg" class="fas fa-heart mr-2 heartBg text-red-600"></i></button>
 
             </div>
           `;
@@ -129,3 +129,4 @@ favoritesMenu.addEventListener("click" , () =>{
   closeBtn.addEventListener("click" , () =>{
     menu.classList.add("hidden")
   })
+
